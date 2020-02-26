@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+In IT for a couple of years I trust people more than machines.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Interested in different domain from frontend to backend technologies I keep learning new things everyday.
+
+We are not perfect but perfection is key to build solid solution.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[darul75@gmail.com](mailto:darul75@gmail.com)

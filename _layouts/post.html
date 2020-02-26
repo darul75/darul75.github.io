@@ -10,8 +10,11 @@ layout: default
   </div>
 
   <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    Written on hey {{ page.date | date: "%B %e, %Y" }}
   </div>
+
+  <script src="{{ base.url | prepend: site.url }}/assets/prism/prism.js"></script>
+  <script></script>
 
   {% include disqus.html %}
 </article>

@@ -10,7 +10,9 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ base.url | prepend: site.url }}/assets/prism/prism.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -19,12 +21,12 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{site.baseurl}}/images/picture.jpg" /></a>
 
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
-          </div>
+          </div>                    
 
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
@@ -41,7 +43,13 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          {% include svg-icons.html %}
+          <ul id='user-links'>
+            <li><a className='buttonize tiny' href='https://twitter.com/darul75' target='_blank'>@darul75</a></li>
+            <li><a className='buttonize tiny' href='mailto:darul75@gmail.com?subject=blog' target='_blank'>say hi</a></li>
+            <li><a className='buttonize tiny' href='https://github.com/darul75' target='_blank'>contribs</a></li>
+            <li><a className='buttonize tiny' href='https://fr.linkedin.com/pub/julien-valery/70/624/b54' target='_blank'>serious</a></li>
+          </ul>
+          <!--{% include svg-icons.html %}-->
         </footer>
       </div>
     </div>

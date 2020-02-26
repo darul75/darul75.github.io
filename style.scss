@@ -68,12 +68,13 @@ p {
   margin: 15px 0;
 }
 
-a {
-  color: $blue;
+a {  
+  color: $green;
   text-decoration: none;
+  outline: 0;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $pink;
   }
 }
 
@@ -242,7 +243,7 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
   border-bottom: 1px solid $lightGray;
 }
 
@@ -256,7 +257,6 @@ nav {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
-    color: $gray;
     font-size: 22px;
     font-style: italic;
   }
@@ -266,8 +266,10 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+    text-transform: uppercase;    
+    font-size: 0.8rem;	
+	  text-decoration: none;
+	  color: #676767;
   }
 }
 
@@ -287,3 +289,111 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+// CUSTOM
+
+//header
+
+header #masthead {
+  position: relative;
+  display: block;
+  margin-top: 140px;  
+  border-bottom: 0px solid #f0f0f0;
+  text-align: center;
+}
+
+header #user-logo {
+	width: 110px;
+  height: 110px;
+  background-size: 110px 110px;
+  display: block;
+  border: 2px solid #9BA450;
+  border-radius: 100%;
+  margin: 0 auto;
+  transition-property: all;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -ms-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  transition-timing-function: cubic-bezier(0.165, 0.63, 0.14, 0.82);
+  -webkit-font-smoothing: antialiased;
+}
+
+footer ul#user-links {
+  clear: both;
+  display: block;
+}
+
+footer ul#user-links li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+//posts
+
+article {
+  padding-left: 20px;
+  position: relative;
+}
+
+h2.table {
+  font-size: 2em;
+}
+
+article.post {
+
+  padding-right: 20px;
+  padding-left: 20px;
+
+  h1 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    a:hover {
+      color: #DF4A7F;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    text-align: justify;    
+    color: #0C1723;    
+    a {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.markdown-body a {
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.markdown-body a:hover {
+  border-color: #FF0042;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6, article ol, article ul, article table, article blockquote, article .markdown-body, .buttons {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+article.post .entry p:first-child::first-letter {
+  float: left;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 50px;
+  margin: 5px 8px -9px 0;
+  color: #DF4A7F;
+}
+
+code:not([class]) {
+  background-color: #FEF6BF;
+}
