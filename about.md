@@ -10,7 +10,7 @@ In IT for a couple of years I trust people more than machines.
 
 Interested in different domain from frontend to backend technologies I keep learning new things everyday.
 
-We are not perfect but perfection is key to build solid solution.
+We are not perfect but perfection is key to build a robust software.
 
 ### Contact me
 
