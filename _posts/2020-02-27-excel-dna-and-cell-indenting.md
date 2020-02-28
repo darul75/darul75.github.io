@@ -3,11 +3,11 @@ layout: post
 title: ExcelDNA and cell indenting
 ---
 
-Most of excel add-in developers choose [ExcelDNA](https://github.com/Excel-DNA) rather than VSTO and they are making the right decision as it performs faster relying on a C layer.
+Most of excel add-in developers choose [ExcelDNA](https://github.com/Excel-DNA) rather than VSTO and they are making the right decision as it performs faster relying on a C API layer.
 
-Excel API is vast and you might not need to wrap all existing methods but only the necessary required for your application to provide interactions it needs with Excel.
+Excel API being so vast, you only need to pick methods required for your application to provide interactions it needs with Excel.
 
-On this thread I will just expose a tiny piece of code and feature you may need to apply indenting on a cell.
+On this thread I will just expose a tiny piece of code for applying indenting on a cell.
 
 ## Cell indenting overview
 
@@ -15,7 +15,7 @@ You don't need me to see all different options to get cell content aligned so I 
 
 [Cell indenting options](https://excel.tips.net/T003270_Understanding_Cell_Indenting.html)
 
-The only option we are interested in for that case is the `Indent` you can specify but not well documented. 
+The only option we are interested in for that case is the `Indent` you can specify but not well documented for usage with ExcelDNA.
 
 ![Git repository example with source tree](/images/posts/exceldna4.png)
 
@@ -25,21 +25,21 @@ To get such result in the Excel grid:
 
 ## Documentation
 
-There is a reference document you will need to learn about all available methods and how to use them with ExcelDNA.
+There is a reference document which will become you bible listing all available Excel API methods in the C API used by ExcelDNA.
 
 [Excel 4 Macro Reference](/assets/download/Excel4MacroReference.pdf)
 
-Inside it there is a section called `Alignment` covering the options but not clearly explaining how to set indent4.
+Inside it there is a section called `Alignment` covering the options but not clearly explaining how to set indentation.
 
 ![Git repository example with source tree](/images/posts/exceldna1.png)
 ![Git repository example with source tree](/images/posts/exceldna2.png)
 ![Git repository example with source tree](/images/posts/exceldna3.png)
 
-You see at the end, you can specify a boolean argument `Add_indent` but it is not clear what it does and to be honest I can't remember what it was doing exactly.
+The last boolean argument `Add_indent` seems to be a good candidate but it is not clear what it does and to be honest I can't remember what it was doing exactly.
 
 ## Solution
 
-I had to play a bit to find it, I was just tempted to make it works so we do not need to use VSTO for just a single piece of missing feature.
+I had to play a bit to find the solution, I was just tempted to make it works so we do not need to use VSTO for just a single piece of missing feature.
 
 I found the solution by looking and thinking on how ExcelDNA works in general and how arguments are passed to method where there is a need to pass exactly what the API is expecting underneath.
 
@@ -71,7 +71,6 @@ Do not give up to early as it may pay off later.
 [ExcelDNA](https://github.com/Excel-DNA)
 
 [Excel 4 Macro Reference](/assets/download/Excel4MacroReference.pdf)
-
 
 ----------
 
